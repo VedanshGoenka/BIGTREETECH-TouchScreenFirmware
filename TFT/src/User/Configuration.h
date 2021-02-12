@@ -96,10 +96,10 @@
 #define MARLIN_FNCOLOR 0  // Default: 0
 
 // Text displayed at the top of the TFT in Marlin Mode
-#define MARLIN_BANNER_TEXT "LCD12864 Emulator"  // Default: "LCD12864 Emulator"
+#define MARLIN_BANNER_TEXT "LowRider2 CNC"  // Default: "LCD12864 Emulator"
 
 // Show banner text at the top of the TFT in Marlin Mode
-#define MARLIN_SHOW_BANNER true  // To enabled: true | To disabled: false (Default: true)
+#define MARLIN_SHOW_BANNER false  // To enabled: true | To disabled: false (Default: true)
 
 /**
  * Run Marlin Mode in Fullscreen
@@ -107,7 +107,7 @@
  * Options: 0: Disabled (RECOMMENDED FOR TFT24)
  *          1: Enabled
  */
-#define DEFAULT_ST7920_FULLSCREEN_MODE 0  // Default: 0
+#define DEFAULT_ST7920_FULLSCREEN_MODE 1  // Default: 0
 
 /**
  * Keep Serial always On (ONLY SUPPORTED ON TFT24 V1.1, TFT35 V3.0, AND TFT28 V3.0)
@@ -151,7 +151,7 @@
 #define EXTRUDER_ID      {"E0",   "E1",      "E2",      "E3",      "E4",      "E5"}
 
 // Prevent extrusion if the temperature is below set temperature
-#define PREVENT_COLD_EXTRUSION_MINTEMP 180
+#define PREVENT_COLD_EXTRUSION_MINTEMP 170
 
 /**
  * Fan control & Fan type Options:
@@ -169,7 +169,7 @@
 #define SPEED_ID {"Sp.", "Fr."}  // (speed, flow rate)
 
 // Axes names displayed in Parameter Settings menu
-#define AXIS_DISPLAY_ID  {"X",  "Y",  "Z",   "E",  "E2"}  // (X, Y, Z, E, E2)
+#define AXIS_DISPLAY_ID  {"X",  "Y",  "Z",   "Y2",  "Z2"}  // (X, Y, Z, E, E2)
 
 // Default X & Y speed (mm/min)
 #define SPEED_XY_SLOW   1000
@@ -190,9 +190,9 @@
 #define X_MIN_POS   0
 #define Y_MIN_POS   0
 #define Z_MIN_POS   0
-#define X_MAX_POS 235
-#define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define X_MAX_POS 650
+#define Y_MAX_POS 1215
+#define Z_MAX_POS 200
 
 // Pause Settings
 #define NOZZLE_PAUSE_RETRACT_LENGTH               15  // (mm)
@@ -261,7 +261,7 @@
  *
  * Options: [0: Disabled, 1: Auto-detect, 2: ABL, 3: BBL, 4: UBL, 5: MBL]
  */
-#define ENABLE_BL_VALUE 1  // Default: 1
+#define ENABLE_BL_VALUE 0  // Default: 1
 
 /**
  * TouchMI settings (on ABL menu)
@@ -284,7 +284,7 @@
  *
  * Options: [0: Disabled, 1: Enabled]
  */
-#define AUTO_SAVE_LOAD_BL_VALUE 1  // Default: 1
+#define AUTO_SAVE_LOAD_BL_VALUE 0  // Default: 1
 
 // PID autotune
 #define PID_CMD {"M303 U1 C8 E0", "M303 U1 C8 E1", "M303 U1 C8 E2", "M303 U1 C8 E3", "M303 U1 C8 E4", "M303 U1 C8 E5", "M303 U1 C8 E-1", ""};
@@ -340,7 +340,7 @@
  *          3: LED_ORANGE,  4: LED_YELLOW,  5: LED_GREEN,
  *          6: LED_BLUE,    7: LED_INDIGO,  8: LED_VIOLET
 */
-#define STARTUP_KNOB_LED_COLOR 1  // Default: 1
+#define STARTUP_KNOB_LED_COLOR 0  // Default: 1
 
 // Keep the LED state in Marlin Mode
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE
@@ -365,8 +365,8 @@
  *          3: 30 Seconds,   4: 60 Seconds,     5: 120 Seconds,
  *          6: 300 Seconds,  7: CUSTOM Seconds
  */
-#define DEFAULT_LCD_IDLE_TIMER  0  // Default: 0
-#define LCD_DIM_CUSTOM_SECONDS (10 * 60)  // Custom value in seconds. This will be used if DEFAULT_LCD_IDLE_TIMER
+#define DEFAULT_LCD_IDLE_TIMER  7  // Default: 0
+#define LCD_DIM_CUSTOM_SECONDS (5 * 60)  // Custom value in seconds. This will be used if DEFAULT_LCD_IDLE_TIMER
                                           // is set to 7 (CUSTOM Seconds).
 
 /**
