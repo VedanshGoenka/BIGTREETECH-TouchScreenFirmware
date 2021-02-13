@@ -117,7 +117,7 @@
  *
  * Options: [0: Disabled, 1: Enabled]
  */
-#define SERIAL_ALWAYS_ON 0  // Default: 0
+#define SERIAL_ALWAYS_ON 1  // Default: 0
 
 /**
  * LCD/Touch Encoder
@@ -354,7 +354,7 @@
  *          9: 80 Percent,  10: 90 Percent,  11: 100 Percent
  */
 #define DEFAULT_LCD_BRIGHTNESS       11  // Default: 11
-#define DEFAULT_LCD_IDLE_BRIGHTNESS   3  // Default: 3
+#define DEFAULT_LCD_IDLE_BRIGHTNESS   5  // Default: 3
 
 /**
  * Idle LCD diming Timer (TFT28 V3.0, TFT35 E3.0, TFT43 V3.0, TFT50 V3.0 & TFT70 V3.0)
